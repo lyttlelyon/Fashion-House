@@ -806,6 +806,7 @@ a {
   width: 100%;
   aspect-ratio: 4 / 3;
   object-fit: cover;
+  object-position: center 28%;
   transition: transform 260ms ease, filter 260ms ease;
 }
 
@@ -1286,7 +1287,8 @@ a {
   }
 
   .member-img-wrap img {
-    aspect-ratio: 1;
+    aspect-ratio: 4 / 5;
+    object-position: center 22%;
   }
 
   .member-info {
