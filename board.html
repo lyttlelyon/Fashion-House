@@ -37,45 +37,69 @@
     </section>
 
     <section class="section board-section">
-      <div class="section-heading reveal">
-        <p class="eyebrow">Leadership</p>
+      <div class="board-intro reveal">
+        <p class="eyebrow">Our People</p>
         <h2>Clear roles, shared standards.</h2>
+        <p>Tap any board member to learn how they support the house, from creative direction to client experience.</p>
       </div>
       <div class="board-grid">
-        <article class="board-card reveal">
-          <img src="assets/board-1.svg" alt="Animated picture of board member Amara Stone">
-          <div>
-            <span>Creative Direction</span>
-            <h2>Amara Stone</h2>
-            <p>Leads the visual language, seasonal themes, and couture standards for each collection.</p>
+        <article class="member-card reveal" tabindex="0" role="button" data-name="Amara Stone" data-role="Creative Director" data-img="assets/board-1.svg" data-bio="Amara leads Aurora Vogue's visual language, seasonal themes, styling direction, and couture standards. She reviews every collection for elegance, balance, and a clear point of view.">
+          <div class="member-img-wrap">
+            <img src="assets/board-1.svg" alt="Animated picture of board member Amara Stone">
+            <div class="member-overlay"><span>View Profile</span></div>
+          </div>
+          <div class="member-info">
+            <h2 class="member-name">Amara Stone</h2>
+            <p class="member-role">Creative Director</p>
           </div>
         </article>
-        <article class="board-card reveal">
-          <img src="assets/board-2.svg" alt="Animated picture of board member Daniel King">
-          <div>
-            <span>Production</span>
-            <h2>Daniel King</h2>
-            <p>Oversees fittings, garment workflow, fabric handling, and final construction quality.</p>
+        <article class="member-card reveal" tabindex="0" role="button" data-name="Daniel King" data-role="Production Lead" data-img="assets/board-2.svg" data-bio="Daniel manages garment workflow, fitting schedules, fabric handling, and finishing checks so each piece moves from concept to final look with care.">
+          <div class="member-img-wrap">
+            <img src="assets/board-2.svg" alt="Animated picture of board member Daniel King">
+            <div class="member-overlay"><span>View Profile</span></div>
+          </div>
+          <div class="member-info">
+            <h2 class="member-name">Daniel King</h2>
+            <p class="member-role">Production Lead</p>
           </div>
         </article>
-        <article class="board-card reveal">
-          <img src="assets/board-3.svg" alt="Animated picture of board member Naomi Brooks">
-          <div>
-            <span>Client Care</span>
-            <h2>Naomi Brooks</h2>
-            <p>Coordinates appointments, styling notes, client feedback, and special occasion planning.</p>
+        <article class="member-card reveal" tabindex="0" role="button" data-name="Naomi Brooks" data-role="Client Relations" data-img="assets/board-3.svg" data-bio="Naomi coordinates appointments, styling notes, client feedback, and special occasion planning so each client feels guided before, during, and after their fitting.">
+          <div class="member-img-wrap">
+            <img src="assets/board-3.svg" alt="Animated picture of board member Naomi Brooks">
+            <div class="member-overlay"><span>View Profile</span></div>
+          </div>
+          <div class="member-info">
+            <h2 class="member-name">Naomi Brooks</h2>
+            <p class="member-role">Client Relations</p>
           </div>
         </article>
-        <article class="board-card reveal">
-          <img src="assets/board-4.svg" alt="Animated picture of board member Marcus Reed">
-          <div>
-            <span>Brand Strategy</span>
-            <h2>Marcus Reed</h2>
-            <p>Guides campaigns, event presence, partnerships, and the public voice of the house.</p>
+        <article class="member-card reveal" tabindex="0" role="button" data-name="Marcus Reed" data-role="Brand Strategist" data-img="assets/board-4.svg" data-bio="Marcus shapes campaign ideas, event presence, partnerships, and the public voice of Aurora Vogue across launches and community moments.">
+          <div class="member-img-wrap">
+            <img src="assets/board-4.svg" alt="Animated picture of board member Marcus Reed">
+            <div class="member-overlay"><span>View Profile</span></div>
+          </div>
+          <div class="member-info">
+            <h2 class="member-name">Marcus Reed</h2>
+            <p class="member-role">Brand Strategist</p>
           </div>
         </article>
       </div>
     </section>
+
+    <div class="modal-backdrop" id="memberModal" aria-hidden="true">
+      <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="modalName">
+        <button class="modal-close" id="modalClose" type="button" aria-label="Close profile">&times;</button>
+        <div class="modal-body">
+          <img class="modal-img" id="modalImg" src="assets/board-1.svg" alt="">
+          <div class="modal-text">
+            <p class="eyebrow">Board Member</p>
+            <h2 id="modalName">Amara Stone</h2>
+            <p class="modal-role" id="modalRole">Creative Director</p>
+            <p class="modal-bio" id="modalBio"></p>
+          </div>
+        </div>
+      </div>
+    </div>
   </main>
 
   <footer class="site-footer">

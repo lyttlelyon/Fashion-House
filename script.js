@@ -12,6 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
   setupMobileNavigation();
   setupTypingMotto();
   revealOnScroll();
+  setupBoardProfiles();
   animateCounters();
   setupProductFilters();
   setupAppointmentForm();
@@ -42,6 +43,55 @@ function setupMobileNavigation() {
     button.classList.toggle("is-open", isOpen);
     button.setAttribute("aria-expanded", String(isOpen));
     button.setAttribute("aria-label", isOpen ? "Close navigation" : "Open navigation");
+  });
+}
+
+function setupBoardProfiles() {
+  const cards = document.querySelectorAll(".member-card");
+  const modal = document.querySelector("#memberModal");
+  const closeButton = document.querySelector("#modalClose");
+  const modalImg = document.querySelector("#modalImg");
+  const modalName = document.querySelector("#modalName");
+  const modalRole = document.querySelector("#modalRole");
+  const modalBio = document.querySelector("#modalBio");
+
+  if (!cards.length || !modal || !closeButton || !modalImg || !modalName || !modalRole || !modalBio) return;
+
+  function closeModal() {
+    modal.classList.remove("modal-open");
+    modal.setAttribute("aria-hidden", "true");
+  }
+
+  function openModal(card) {
+      modalImg.src = card.dataset.img;
+      modalImg.alt = `Animated picture of board member ${card.dataset.name}`;
+      modalName.textContent = card.dataset.name;
+      modalRole.textContent = card.dataset.role;
+      modalBio.textContent = card.dataset.bio;
+      modal.classList.add("modal-open");
+      modal.setAttribute("aria-hidden", "false");
+  }
+
+  cards.forEach((card) => {
+    card.addEventListener("click", () => {
+      openModal(card);
+    });
+
+    card.addEventListener("keydown", (event) => {
+      if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault();
+        openModal(card);
+      }
+    });
+  });
+
+  closeButton.addEventListener("click", closeModal);
+  modal.addEventListener("click", (event) => {
+    if (event.target === modal) closeModal();
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") closeModal();
   });
 }
 
