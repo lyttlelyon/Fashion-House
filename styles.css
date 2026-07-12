@@ -1013,11 +1013,15 @@ a {
   }
 
   .feature-band::before {
-    inset: 16px;
+    display: none;
   }
 
   .feature-image img {
     aspect-ratio: 4 / 5;
+  }
+
+  .feature-image::after {
+    display: none;
   }
 
   .feature-image-label {
