@@ -253,27 +253,6 @@ a {
   color: #dfd3c8;
 }
 
-.hero-meta {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-top: 24px;
-}
-
-.hero-meta span {
-  display: inline-flex;
-  align-items: center;
-  min-height: 34px;
-  padding: 0 12px;
-  color: #fff4dd;
-  background: rgba(8, 8, 10, 0.58);
-  border: 1px solid rgba(255, 247, 231, 0.26);
-  border-radius: 999px;
-  font-size: 0.9rem;
-  font-weight: 800;
-  text-shadow: none;
-}
-
 .eyebrow {
   margin: 0 0 12px;
   color: var(--gold);
@@ -369,16 +348,6 @@ a {
   color: var(--muted);
 }
 
-.text-link {
-  display: inline-flex;
-  align-items: center;
-  min-height: 40px;
-  margin-top: 14px;
-  color: #f4d486;
-  font-weight: 850;
-  border-bottom: 1px solid rgba(214, 170, 89, 0.44);
-}
-
 .atelier-intro {
   align-items: stretch;
 }
@@ -448,6 +417,7 @@ a {
 }
 
 .lookbook-card {
+  display: block;
   position: relative;
   min-height: 420px;
   overflow: hidden;
@@ -466,7 +436,7 @@ a {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  filter: brightness(0.88) contrast(1.04) saturate(1.08);
+  filter: brightness(0.82) contrast(1.06) saturate(1.08);
   transition: transform 260ms ease, filter 260ms ease;
 }
 
@@ -480,9 +450,10 @@ a {
   left: 0;
   right: 0;
   bottom: 0;
-  padding: 80px 22px 22px;
+  padding: 92px 22px 22px;
   color: #fff7ed;
-  background: linear-gradient(0deg, rgba(8, 8, 10, 0.88), rgba(8, 8, 10, 0));
+  background: linear-gradient(0deg, rgba(8, 8, 10, 0.96), rgba(8, 8, 10, 0.56) 58%, rgba(8, 8, 10, 0));
+  text-shadow: 0 2px 16px rgba(0, 0, 0, 0.62);
 }
 
 .lookbook-card span {
@@ -514,15 +485,6 @@ a {
   border-bottom: 1px solid rgba(247, 239, 228, 0.08);
 }
 
-.feature-band::before {
-  content: "";
-  position: absolute;
-  inset: 24px max(16px, calc((100vw - 1180px) / 2));
-  pointer-events: none;
-  border: 1px solid rgba(214, 170, 89, 0.18);
-  border-radius: 8px;
-}
-
 .feature-image {
   position: relative;
   isolation: isolate;
@@ -538,25 +500,16 @@ a {
   filter: brightness(1.12) contrast(1.05) saturate(1.08);
 }
 
-.feature-image::after {
-  content: "";
-  position: absolute;
-  inset: 12px;
-  pointer-events: none;
-  border: 1px solid rgba(255, 247, 231, 0.3);
-  border-radius: 6px;
-}
-
 .feature-image-label {
   position: absolute;
   left: 24px;
   bottom: 24px;
   z-index: 1;
   min-width: 180px;
-  padding: 14px 16px;
+  padding: 15px 17px;
   color: #fff7ed;
-  background: rgba(11, 11, 13, 0.88);
-  border: 1px solid rgba(214, 170, 89, 0.4);
+  background: rgba(8, 8, 10, 0.94);
+  border: 1px solid rgba(214, 170, 89, 0.48);
   border-radius: 6px;
   box-shadow: 0 18px 34px rgba(0, 0, 0, 0.36);
 }
@@ -594,44 +547,6 @@ a {
   border-radius: 999px;
 }
 
-.check-list {
-  padding: 0;
-  margin: 24px 0 0;
-  list-style: none;
-}
-
-.check-list li {
-  padding: 13px 0 13px 34px;
-  border-top: 1px solid rgba(247, 239, 228, 0.12);
-  position: relative;
-  font-weight: 650;
-  color: #f3e7dc;
-}
-
-.check-list li::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 17px;
-  width: 16px;
-  height: 16px;
-  border: 1px solid rgba(159, 181, 140, 0.72);
-  border-radius: 50%;
-  background: #151317;
-}
-
-.check-list li::after {
-  content: "";
-  position: absolute;
-  left: 6px;
-  top: 21px;
-  width: 4px;
-  height: 8px;
-  border: solid rgba(159, 181, 140, 0.95);
-  border-width: 0 2px 2px 0;
-  transform: rotate(45deg);
-}
-
 .collection-notes {
   display: flex;
   flex-wrap: wrap;
@@ -650,10 +565,6 @@ a {
   border-radius: 999px;
   font-size: 0.9rem;
   font-weight: 750;
-}
-
-.feature-button {
-  margin-top: 28px;
 }
 
 .home-appointment {
@@ -1181,11 +1092,6 @@ a {
     white-space: nowrap;
   }
 
-  .hero-meta span {
-    min-height: 32px;
-    font-size: 0.82rem;
-  }
-
   .metric-strip,
   .product-grid,
   .trustee-grid,
@@ -1242,16 +1148,8 @@ a {
     font-size: 1.38rem;
   }
 
-  .feature-band::before {
-    display: none;
-  }
-
   .feature-image img {
     aspect-ratio: 4 / 5;
-  }
-
-  .feature-image::after {
-    display: none;
   }
 
   .feature-image-label {
@@ -1268,10 +1166,6 @@ a {
   .collection-notes span {
     min-height: 32px;
     font-size: 0.84rem;
-  }
-
-  .feature-button {
-    width: 100%;
   }
 
   .home-appointment {
