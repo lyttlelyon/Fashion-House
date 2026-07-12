@@ -104,15 +104,55 @@ a {
 
 .menu-toggle {
   display: none;
+  position: relative;
   width: 44px;
   height: 44px;
   border: 1px solid var(--line);
   border-radius: 6px;
-  background: var(--surface-soft);
+  background: #1c171d;
   color: var(--ink);
-  font-size: 0.85rem;
+  font-size: 0;
   font-weight: 850;
   cursor: pointer;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.26);
+  transition: background 160ms ease, border-color 160ms ease, box-shadow 160ms ease;
+}
+
+.menu-toggle::before,
+.menu-toggle::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 20px;
+  height: 2px;
+  border-radius: 999px;
+  background: #fff7e7;
+  transition: transform 160ms ease, box-shadow 160ms ease;
+}
+
+.menu-toggle::before {
+  box-shadow: 0 7px 0 #fff7e7;
+  transform: translate(-50%, -7px);
+}
+
+.menu-toggle::after {
+  transform: translate(-50%, 7px);
+}
+
+.menu-toggle:hover,
+.menu-toggle.is-open {
+  border-color: rgba(214, 170, 89, 0.46);
+  background: #261f25;
+}
+
+.menu-toggle.is-open::before {
+  box-shadow: none;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.menu-toggle.is-open::after {
+  transform: translate(-50%, -50%) rotate(-45deg);
 }
 
 .ticker {
@@ -757,15 +797,19 @@ a {
 
   .nav-links {
     position: absolute;
-    top: 66px;
-    left: 0;
-    right: 0;
+    top: calc(100% + 1px);
+    left: max(16px, calc((100vw - 1180px) / 2));
+    right: max(16px, calc((100vw - 1180px) / 2));
     display: none;
     flex-direction: column;
     align-items: stretch;
-    padding: 12px 16px 18px;
-    background: rgba(13, 10, 14, 0.98);
-    border-bottom: 1px solid var(--line);
+    gap: 4px;
+    padding: 10px;
+    background: #121014;
+    border: 1px solid rgba(247, 239, 228, 0.14);
+    border-top: 0;
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 22px 42px rgba(0, 0, 0, 0.48);
   }
 
   .nav-links.open {
@@ -773,7 +817,19 @@ a {
   }
 
   .nav-links a {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
     border-radius: 6px;
+    padding: 0 14px;
+    color: #eee0d1;
+    background: #19161b;
+    border: 1px solid rgba(247, 239, 228, 0.08);
+  }
+
+  .nav-links a:hover,
+  .nav-links a.active {
+    background: rgba(214, 170, 89, 0.18);
   }
 
   .intro-grid,

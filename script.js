@@ -39,8 +39,9 @@ function setupMobileNavigation() {
 
   button.addEventListener("click", () => {
     const isOpen = links.classList.toggle("open");
+    button.classList.toggle("is-open", isOpen);
     button.setAttribute("aria-expanded", String(isOpen));
-    button.textContent = isOpen ? "Close" : "Menu";
+    button.setAttribute("aria-label", isOpen ? "Close navigation" : "Open navigation");
   });
 }
 
