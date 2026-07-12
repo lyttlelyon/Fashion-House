@@ -607,7 +607,7 @@ a {
   min-height: 320px;
 }
 
-.trustees-hero {
+.board-hero {
   background:
     linear-gradient(90deg, rgba(8, 8, 10, 0.62), rgba(8, 8, 10, 0.18), rgba(8, 8, 10, 0.02)),
     url("https://images.unsplash.com/photo-1558769132-cb1aea458c5e?auto=format&fit=crop&w=1800&q=85") center/cover;
@@ -657,7 +657,7 @@ a {
 }
 
 .product-grid,
-.trustee-grid,
+.board-grid,
 .event-list {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -665,7 +665,7 @@ a {
 }
 
 .product-card,
-.trustee-card,
+.board-card,
 .event-card,
 .dom-card,
 .contact-panel,
@@ -679,7 +679,7 @@ a {
 }
 
 .product-card::before,
-.trustee-card::before,
+.board-card::before,
 .event-card::before,
 .dom-card::before,
 .contact-panel::before,
@@ -700,7 +700,7 @@ a {
 }
 
 .product-card:hover,
-.trustee-card:hover,
+.board-card:hover,
 .event-card:hover {
   transform: translateY(-4px);
   border-color: rgba(214, 170, 89, 0.34);
@@ -725,7 +725,7 @@ a {
 }
 
 .product-card div,
-.trustee-card,
+.board-card,
 .event-card,
 .dom-card,
 .contact-panel {
@@ -733,6 +733,7 @@ a {
 }
 
 .product-card span,
+.board-card span,
 .event-card time {
   color: var(--gold);
   font-weight: 850;
@@ -741,7 +742,7 @@ a {
 }
 
 .product-card h2,
-.trustee-card h2,
+.board-card h2,
 .event-card h2 {
   margin: 8px 0;
   font-size: 1.28rem;
@@ -750,7 +751,7 @@ a {
 }
 
 .product-card p,
-.trustee-card p,
+.board-card p,
 .event-card p,
 .contact-panel p,
 .dom-card li {
@@ -764,47 +765,25 @@ a {
   color: var(--gold);
 }
 
-.trustee-grid {
+.board-grid {
   grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
-.trustee-card {
-  text-align: center;
+.board-card {
+  display: grid;
+  align-content: start;
+  gap: 16px;
+  text-align: left;
 }
 
-.trustee-card img {
-  width: 100%;
+.board-card img {
+  width: 112px;
   aspect-ratio: 1;
   object-fit: cover;
   border-radius: 50%;
-  border: 6px solid rgba(214, 170, 89, 0.22);
-  margin-bottom: 18px;
+  border: 4px solid rgba(214, 170, 89, 0.24);
   background: #2a242a;
   box-shadow: 0 16px 36px rgba(0, 0, 0, 0.28);
-  animation: portraitFloat 4.5s ease-in-out infinite;
-}
-
-.trustee-card:nth-child(2) img {
-  animation-delay: 0.35s;
-}
-
-.trustee-card:nth-child(3) img {
-  animation-delay: 0.7s;
-}
-
-.trustee-card:nth-child(4) img {
-  animation-delay: 1.05s;
-}
-
-@keyframes portraitFloat {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-
-  50% {
-    transform: translateY(-7px);
-  }
 }
 
 .appointment-form {
@@ -1037,13 +1016,12 @@ a {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .trustee-grid {
+  .board-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .trustee-card img {
-    width: min(150px, 72%);
-    margin-inline: auto;
+  .board-card img {
+    width: 96px;
   }
 }
 
@@ -1074,7 +1052,7 @@ a {
     grid-template-columns: 1fr;
   }
 
-  .trustee-grid {
+  .board-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 14px;
   }
@@ -1151,22 +1129,20 @@ a {
     width: 100%;
   }
 
-  .trustee-card {
-    padding: 18px 12px;
+  .board-card {
+    gap: 12px;
+    padding: 16px 12px;
   }
 
-  .trustee-card img {
-    width: min(118px, 74%);
-    border-width: 4px;
-    margin-bottom: 12px;
-    animation: none;
+  .board-card img {
+    width: 76px;
   }
 
-  .trustee-card h2 {
+  .board-card h2 {
     font-size: 1rem;
   }
 
-  .trustee-card p {
+  .board-card p {
     margin: 0;
     font-size: 0.9rem;
   }

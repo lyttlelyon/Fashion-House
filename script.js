@@ -1,7 +1,7 @@
 const pageNames = {
   home: "index.html",
   products: "products.html",
-  trustees: "trustees.html",
+  board: "board.html",
   appointments: "appointments.html",
   events: "events.html",
   dom: "dom.html"

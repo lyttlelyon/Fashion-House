@@ -6,7 +6,7 @@ This is a CSC 106/IFT 203 web technology project for an upcoming fashion house.
 
 - `index.html` - Home
 - `products.html` - Product showcase
-- `trustees.html` - Board of Trustees
+- `board.html` - Board
 - `appointments.html` - Inquiries and appointment booking
 - `events.html` - Upcoming events
 - `dom.html` - DOM structure
@@ -30,7 +30,7 @@ http://localhost:8000
 - At least five pages
 - Same link structure on all pages
 - Product showcase
-- Board of Trustees section
+- Board section
 - Inquiry and appointment page
 - Upcoming events page
 - Marquee on all pages
