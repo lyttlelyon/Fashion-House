@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Manrope:wght@400;600;700;800&display=swap");
+
 :root {
   --ink: #f7efe4;
   --muted: #bdb0a5;
@@ -24,7 +26,7 @@ html {
 
 body {
   margin: 0;
-  font-family: "Segoe UI", Arial, sans-serif;
+  font-family: "Manrope", "Segoe UI", Arial, sans-serif;
   color: var(--ink);
   background: linear-gradient(180deg, #111014 0%, #0b0b0d 48%, #08080a 100%);
   line-height: 1.6;
@@ -204,7 +206,7 @@ a {
   max-width: 760px;
   font-size: clamp(3rem, 8vw, 6.6rem);
   line-height: 0.95;
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "Cormorant Garamond", Georgia, "Times New Roman", serif;
   letter-spacing: 0;
 }
 
@@ -213,7 +215,7 @@ a {
   min-height: 1.5em;
   margin: 14px 0 0;
   color: #f0d08a;
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "Cormorant Garamond", Georgia, "Times New Roman", serif;
   font-size: clamp(1.25rem, 3vw, 2rem);
   font-style: italic;
   line-height: 1.25;
@@ -338,7 +340,7 @@ a {
   margin: 0 0 14px;
   font-size: clamp(2rem, 4vw, 3.5rem);
   line-height: 1.05;
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "Cormorant Garamond", Georgia, "Times New Roman", serif;
   letter-spacing: 0;
   color: #fff7ed;
 }
@@ -378,7 +380,7 @@ a {
   color: var(--gold);
   font-size: 2.5rem;
   line-height: 1;
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "Cormorant Garamond", Georgia, "Times New Roman", serif;
 }
 
 .metric-strip span {
@@ -400,7 +402,7 @@ a {
   max-width: 760px;
   margin: 0;
   color: #fff7ed;
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "Cormorant Garamond", Georgia, "Times New Roman", serif;
   font-size: clamp(2rem, 4vw, 3.4rem);
   line-height: 1.05;
   letter-spacing: 0;
@@ -460,10 +462,16 @@ a {
 .lookbook-card h3 {
   margin: 8px 0 0;
   max-width: 360px;
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "Cormorant Garamond", Georgia, "Times New Roman", serif;
   font-size: 1.65rem;
   line-height: 1.08;
   letter-spacing: 0;
+}
+
+.lookbook-copy p {
+  margin: 12px 0 0;
+  color: var(--gold);
+  font-weight: 850;
 }
 
 .feature-band {
@@ -566,7 +574,7 @@ a {
 .home-appointment-copy h2 {
   margin: 0 0 14px;
   max-width: 720px;
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "Cormorant Garamond", Georgia, "Times New Roman", serif;
   font-size: clamp(2rem, 4vw, 3.5rem);
   line-height: 1.05;
   letter-spacing: 0;
@@ -888,7 +896,7 @@ a {
   display: block;
   font-size: 2rem;
   color: var(--gold);
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "Cormorant Garamond", Georgia, "Times New Roman", serif;
 }
 
 .countdown span {
@@ -1151,6 +1159,7 @@ a {
     width: min(118px, 74%);
     border-width: 4px;
     margin-bottom: 12px;
+    animation: none;
   }
 
   .trustee-card h2 {
