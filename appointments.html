@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Appointments | Aurora Vogue</title>
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body data-page="appointments">
+  <header class="site-header">
+    <nav class="nav-shell" aria-label="Main navigation">
+      <a class="brand" href="index.html"><span class="brand-mark">AV</span><span>Aurora Vogue</span></a>
+      <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false">Menu</button>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="trustees.html">Trustees</a>
+        <a href="appointments.html">Appointments</a>
+        <a href="events.html">Events</a>
+        <a href="dom.html">DOM</a>
+      </div>
+    </nav>
+    <marquee class="ticker" behavior="scroll" direction="left">
+      Grand Fashion Preview: August 18, 2026 | Bridal couture fittings open every Friday | Student showcase discount: 15% off selected pieces
+    </marquee>
+  </header>
+
+  <main>
+    <section class="page-hero appointment-hero">
+      <div class="page-hero-inner reveal">
+        <p class="eyebrow">Inquiries and Appointments</p>
+        <h1>Book fittings, styling sessions, and product inquiries.</h1>
+        <p>Send your details and preferred date for fittings, custom tailoring, or styling support.</p>
+      </div>
+    </section>
+
+    <section class="section contact-layout">
+      <form class="appointment-form reveal" id="appointmentForm">
+        <label>
+          Full Name
+          <input type="text" name="name" placeholder="Enter your full name" required>
+        </label>
+        <label>
+          Email Address
+          <input type="email" name="email" placeholder="example@email.com" required>
+        </label>
+        <label>
+          Service
+          <select name="service" required>
+            <option value="">Select a service</option>
+            <option>Bridal consultation</option>
+            <option>Custom tailoring</option>
+            <option>Product inquiry</option>
+            <option>Event styling</option>
+          </select>
+        </label>
+        <label>
+          Preferred Date
+          <input type="date" name="date" required>
+        </label>
+        <label class="full-span">
+          Message
+          <textarea name="message" rows="5" placeholder="Tell us what you need"></textarea>
+        </label>
+        <button class="button primary full-span" type="submit">Submit Booking</button>
+        <p class="form-status full-span" id="formStatus" role="status"></p>
+      </form>
+
+      <aside class="contact-panel reveal">
+        <h2>Studio Contact</h2>
+        <p><strong>Phone:</strong> +1 555 019 2048</p>
+        <p><strong>Email:</strong> appointments@auroravogue.example</p>
+        <p><strong>Address:</strong> 24 Couture Avenue, Downtown Studio</p>
+        <div class="hours">
+          <h3>Opening Hours</h3>
+          <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
+          <p>Saturday: 10:00 AM - 4:00 PM</p>
+        </div>
+      </aside>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span data-year></span> Aurora Vogue Fashion House.</p>
+  </footer>
+</body>
+</html>

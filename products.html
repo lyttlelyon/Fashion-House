@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Products | Aurora Vogue</title>
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body data-page="products">
+  <header class="site-header">
+    <nav class="nav-shell" aria-label="Main navigation">
+      <a class="brand" href="index.html"><span class="brand-mark">AV</span><span>Aurora Vogue</span></a>
+      <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false">Menu</button>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="trustees.html">Trustees</a>
+        <a href="appointments.html">Appointments</a>
+        <a href="events.html">Events</a>
+        <a href="dom.html">DOM</a>
+      </div>
+    </nav>
+    <marquee class="ticker" behavior="scroll" direction="left">
+      Grand Fashion Preview: August 18, 2026 | Bridal couture fittings open every Friday | Student showcase discount: 15% off selected pieces
+    </marquee>
+  </header>
+
+  <main>
+    <section class="page-hero compact">
+      <div class="page-hero-inner reveal">
+        <p class="eyebrow">Product Showcase</p>
+        <h1>Collections for every occasion.</h1>
+        <p>Filter the catalogue by category and explore sample prices for Aurora Vogue products.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="toolbar reveal" aria-label="Product filters">
+        <button class="filter-btn active" data-filter="all" type="button">All</button>
+        <button class="filter-btn" data-filter="Couture" type="button">Couture</button>
+        <button class="filter-btn" data-filter="Formal Wear" type="button">Formal Wear</button>
+        <button class="filter-btn" data-filter="Accessories" type="button">Accessories</button>
+        <button class="filter-btn" data-filter="Footwear" type="button">Footwear</button>
+      </div>
+
+      <div class="product-grid">
+        <article class="product-card reveal" data-category="Couture">
+          <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=900&q=85" alt="Model wearing couture evening dress">
+          <div>
+            <span>Couture</span>
+            <h2>Celeste Evening Gown</h2>
+            <p>Flowing satin dress with structured bodice and hand-finished detail.</p>
+            <strong>$240</strong>
+          </div>
+        </article>
+        <article class="product-card reveal" data-category="Formal Wear">
+          <img src="https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?auto=format&fit=crop&w=900&q=85" alt="Well dressed man in tailored outfit">
+          <div>
+            <span>Formal Wear</span>
+            <h2>Royal Tailored Set</h2>
+            <p>Clean tailored menswear set made with rich fabric and subtle finishing.</p>
+            <strong>$180</strong>
+          </div>
+        </article>
+        <article class="product-card reveal" data-category="Accessories">
+          <img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=900&q=85" alt="Luxury handbag on display">
+          <div>
+            <span>Accessories</span>
+            <h2>Aurora Mini Bag</h2>
+            <p>Compact evening bag with metallic finish, chain strap, and soft lining.</p>
+            <strong>$85</strong>
+          </div>
+        </article>
+        <article class="product-card reveal" data-category="Footwear">
+          <img src="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?auto=format&fit=crop&w=900&q=85" alt="Elegant high heel shoes">
+          <div>
+            <span>Footwear</span>
+            <h2>Velvet Step Heels</h2>
+            <p>Comfortable high heels for ceremonies, photoshoots, and evening looks.</p>
+            <strong>$110</strong>
+          </div>
+        </article>
+        <article class="product-card reveal" data-category="Couture">
+          <img src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?auto=format&fit=crop&w=900&q=85" alt="Fashion model in designer outfit">
+          <div>
+            <span>Couture</span>
+            <h2>Opal Cocktail Dress</h2>
+            <p>A statement dress for dinners, award nights, and formal celebrations.</p>
+            <strong>$165</strong>
+          </div>
+        </article>
+        <article class="product-card reveal" data-category="Formal Wear">
+          <img src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=900&q=85" alt="Elegant fashion portrait">
+          <div>
+            <span>Formal Wear</span>
+            <h2>Ember Print Wrap</h2>
+            <p>Color-rich wrap dress with adjustable fit and neat finishing.</p>
+            <strong>$130</strong>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span data-year></span> Aurora Vogue Fashion House.</p>
+  </footer>
+</body>
+</html>

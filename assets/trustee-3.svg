@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 420" role="img" aria-labelledby="title desc">
+  <title id="title">Animated portrait of a Black woman trustee</title>
+  <desc id="desc">Cartoon-style trustee portrait with brown skin, braided hair, earrings, and a green outfit.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fffaf2"/>
+      <stop offset="1" stop-color="#d3b9c9"/>
+    </linearGradient>
+  </defs>
+  <rect width="420" height="420" fill="url(#bg)"/>
+  <path d="M94 420c20-86 70-132 116-132s96 46 116 132z" fill="#5f7765"/>
+  <path d="M151 420c10-60 31-96 59-96s49 36 59 96z" fill="#f7efe4"/>
+  <path d="M116 138c18-60 58-88 94-88s76 28 94 88v126c-15 42-55 66-94 66s-79-24-94-66z" fill="#1a1311"/>
+  <circle cx="210" cy="190" r="88" fill="#8a5237"/>
+  <path d="M126 172c24-64 66-80 111-70 36 8 55 34 57 70-45-25-105-27-168 0z" fill="#15100f"/>
+  <path d="M111 145c36-65 90-82 151-42" fill="none" stroke="#2a211e" stroke-width="18" stroke-linecap="round"/>
+  <circle cx="176" cy="202" r="7" fill="#171512"/>
+  <circle cx="244" cy="202" r="7" fill="#171512"/>
+  <path d="M205 213l-11 38h31z" fill="#6f3f29" opacity=".55"/>
+  <path d="M181 264c19 18 43 18 61 0" fill="none" stroke="#2f1710" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="132" cy="221" r="18" fill="#9a6245"/>
+  <circle cx="288" cy="221" r="18" fill="#9a6245"/>
+  <circle cx="126" cy="244" r="9" fill="#c99a45"/>
+  <circle cx="294" cy="244" r="9" fill="#c99a45"/>
+</svg>

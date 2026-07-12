@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 420" role="img" aria-labelledby="title desc">
+  <title id="title">Animated portrait of a Black man trustee</title>
+  <desc id="desc">Cartoon-style trustee portrait with deep brown skin, beard, and a gold shirt.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f1ded5"/>
+      <stop offset="1" stop-color="#b84f5f"/>
+    </linearGradient>
+  </defs>
+  <rect width="420" height="420" fill="url(#bg)"/>
+  <path d="M82 420c18-92 78-142 128-142s110 50 128 142z" fill="#c99a45"/>
+  <path d="M145 420c10-64 33-100 65-100s55 36 65 100z" fill="#4a273c"/>
+  <circle cx="210" cy="185" r="95" fill="#6c3d2b"/>
+  <path d="M120 173c4-76 45-119 91-119 54 0 89 45 89 119-45-28-118-29-180 0z" fill="#171512"/>
+  <path d="M153 246c14 50 100 50 114 0 0 49-25 81-57 81s-57-32-57-81z" fill="#21100b"/>
+  <circle cx="176" cy="199" r="7" fill="#171512"/>
+  <circle cx="244" cy="199" r="7" fill="#171512"/>
+  <path d="M207 211l-14 41h33z" fill="#523020" opacity=".55"/>
+  <path d="M184 263c20 14 42 14 56 0" fill="none" stroke="#fffaf2" stroke-width="7" stroke-linecap="round"/>
+  <circle cx="130" cy="217" r="18" fill="#7e4b35"/>
+  <circle cx="290" cy="217" r="18" fill="#7e4b35"/>
+  <path d="M142 151c37-35 85-43 133-12" fill="none" stroke="#fffaf2" stroke-width="12" stroke-linecap="round" opacity=".16"/>
+</svg>
