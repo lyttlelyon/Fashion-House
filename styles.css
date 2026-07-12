@@ -412,15 +412,14 @@ a {
 
 .lookbook-grid {
   display: grid;
-  grid-template-columns: 1.1fr 0.9fr 0.9fr;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 18px;
 }
 
 .lookbook-card {
   display: grid;
-  grid-template-rows: minmax(0, 1fr) auto;
+  grid-template-rows: auto 1fr;
   position: relative;
-  min-height: 420px;
   overflow: hidden;
   border-radius: 8px;
   border: 1px solid rgba(247, 239, 228, 0.14);
@@ -428,14 +427,10 @@ a {
   box-shadow: var(--shadow);
 }
 
-.lookbook-card:nth-child(2),
-.lookbook-card:nth-child(3) {
-  min-height: 360px;
-}
-
 .lookbook-card img {
   width: 100%;
-  height: 100%;
+  aspect-ratio: 4 / 3;
+  height: auto;
   object-fit: cover;
   filter: brightness(1.02) contrast(1.04) saturate(1.08);
   transition: transform 260ms ease, filter 260ms ease;
@@ -490,7 +485,7 @@ a {
 
 .feature-image img {
   width: 100%;
-  aspect-ratio: 5 / 4;
+  aspect-ratio: 16 / 10;
   object-fit: cover;
   box-shadow: 0 28px 70px rgba(0, 0, 0, 0.44);
   border: 1px solid rgba(247, 239, 228, 0.18);
@@ -537,10 +532,10 @@ a {
 .home-appointment {
   width: 100%;
   margin: 0;
-  padding: 84px max(16px, calc((100vw - 1180px) / 2));
+  padding: 72px max(16px, calc((100vw - 1180px) / 2));
   display: grid;
-  grid-template-columns: 0.82fr 1fr;
-  gap: 42px;
+  grid-template-columns: minmax(280px, 0.74fr) 1fr;
+  gap: 38px;
   align-items: center;
   background:
     linear-gradient(90deg, rgba(159, 181, 140, 0.12), transparent 34%),
@@ -549,7 +544,7 @@ a {
 }
 
 .home-appointment-image {
-  min-height: 430px;
+  min-height: 0;
   overflow: hidden;
   border-radius: 8px;
   border: 1px solid rgba(247, 239, 228, 0.14);
@@ -558,7 +553,8 @@ a {
 
 .home-appointment-image img {
   width: 100%;
-  height: 100%;
+  aspect-ratio: 4 / 3;
+  height: auto;
   object-fit: cover;
   filter: brightness(1.06) contrast(1.04) saturate(1.08);
 }
@@ -1020,10 +1016,8 @@ a {
     grid-template-columns: 1fr;
   }
 
-  .lookbook-card,
-  .lookbook-card:nth-child(2),
-  .lookbook-card:nth-child(3) {
-    min-height: 340px;
+  .lookbook-card img {
+    aspect-ratio: 16 / 10;
   }
 
   .home-appointment {
@@ -1037,6 +1031,11 @@ a {
 
   .trustee-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .trustee-card img {
+    width: min(150px, 72%);
+    margin-inline: auto;
   }
 }
 
@@ -1061,11 +1060,15 @@ a {
 
   .metric-strip,
   .product-grid,
-  .trustee-grid,
   .event-list,
   .countdown,
   .appointment-form {
     grid-template-columns: 1fr;
+  }
+
+  .trustee-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
   }
 
   .appointment-form {
@@ -1101,12 +1104,6 @@ a {
     padding-top: 22px;
   }
 
-  .lookbook-card,
-  .lookbook-card:nth-child(2),
-  .lookbook-card:nth-child(3) {
-    min-height: 310px;
-  }
-
   .lookbook-copy {
     min-height: auto;
     padding: 18px;
@@ -1117,7 +1114,7 @@ a {
   }
 
   .feature-image img {
-    aspect-ratio: 4 / 5;
+    aspect-ratio: 4 / 3;
   }
 
   .feature-copy {
@@ -1135,7 +1132,7 @@ a {
   }
 
   .home-appointment-image {
-    min-height: 330px;
+    min-height: 0;
   }
 
   .home-appointment-copy {
@@ -1144,5 +1141,24 @@ a {
 
   .appointment-actions .button {
     width: 100%;
+  }
+
+  .trustee-card {
+    padding: 18px 12px;
+  }
+
+  .trustee-card img {
+    width: min(118px, 74%);
+    border-width: 4px;
+    margin-bottom: 12px;
+  }
+
+  .trustee-card h2 {
+    font-size: 1rem;
+  }
+
+  .trustee-card p {
+    margin: 0;
+    font-size: 0.9rem;
   }
 }
