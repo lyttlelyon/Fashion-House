@@ -1261,6 +1261,10 @@ a {
     min-width: 0;
   }
 
+  .feature-copy {
+    padding: 0 8px;
+  }
+
   .collection-notes span {
     min-height: 32px;
     font-size: 0.84rem;
