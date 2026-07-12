@@ -253,6 +253,27 @@ a {
   color: #dfd3c8;
 }
 
+.hero-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 24px;
+}
+
+.hero-meta span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 34px;
+  padding: 0 12px;
+  color: #fff4dd;
+  background: rgba(8, 8, 10, 0.58);
+  border: 1px solid rgba(255, 247, 231, 0.26);
+  border-radius: 999px;
+  font-size: 0.9rem;
+  font-weight: 800;
+  text-shadow: none;
+}
+
 .eyebrow {
   margin: 0 0 12px;
   color: var(--gold);
@@ -319,7 +340,7 @@ a {
   padding: 72px 0;
 }
 
-.intro-grid,
+.atelier-intro,
 .feature-band,
 .contact-layout,
 .dom-layout,
@@ -348,11 +369,27 @@ a {
   color: var(--muted);
 }
 
+.text-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 40px;
+  margin-top: 14px;
+  color: #f4d486;
+  font-weight: 850;
+  border-bottom: 1px solid rgba(214, 170, 89, 0.44);
+}
+
+.atelier-intro {
+  align-items: stretch;
+}
+
 .metric-strip {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   border: 1px solid var(--line);
-  background: linear-gradient(180deg, rgba(37, 32, 38, 0.98), rgba(19, 18, 22, 0.98));
+  background:
+    linear-gradient(135deg, rgba(111, 45, 85, 0.2), transparent 42%),
+    linear-gradient(180deg, rgba(37, 32, 38, 0.98), rgba(19, 18, 22, 0.98));
   box-shadow: var(--shadow);
   border-radius: 8px;
   overflow: hidden;
@@ -380,6 +417,89 @@ a {
   margin-top: 8px;
   color: var(--muted);
   font-weight: 650;
+}
+
+.section-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 28px;
+  margin-bottom: 28px;
+}
+
+.section-heading h2 {
+  max-width: 760px;
+  margin: 0;
+  color: #fff7ed;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2rem, 4vw, 3.4rem);
+  line-height: 1.05;
+  letter-spacing: 0;
+}
+
+.lookbook-section {
+  padding-top: 36px;
+}
+
+.lookbook-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr 0.9fr;
+  gap: 18px;
+}
+
+.lookbook-card {
+  position: relative;
+  min-height: 420px;
+  overflow: hidden;
+  border-radius: 8px;
+  border: 1px solid rgba(247, 239, 228, 0.14);
+  background: #151317;
+  box-shadow: var(--shadow);
+}
+
+.lookbook-card:nth-child(2),
+.lookbook-card:nth-child(3) {
+  min-height: 360px;
+}
+
+.lookbook-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.88) contrast(1.04) saturate(1.08);
+  transition: transform 260ms ease, filter 260ms ease;
+}
+
+.lookbook-card:hover img {
+  transform: scale(1.035);
+  filter: brightness(1) contrast(1.06) saturate(1.12);
+}
+
+.lookbook-card div {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 80px 22px 22px;
+  color: #fff7ed;
+  background: linear-gradient(0deg, rgba(8, 8, 10, 0.88), rgba(8, 8, 10, 0));
+}
+
+.lookbook-card span {
+  color: #f3d17b;
+  font-size: 0.76rem;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.lookbook-card h3 {
+  margin: 8px 0 0;
+  max-width: 360px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.65rem;
+  line-height: 1.08;
+  letter-spacing: 0;
 }
 
 .feature-band {
@@ -533,6 +653,61 @@ a {
 }
 
 .feature-button {
+  margin-top: 28px;
+}
+
+.home-appointment {
+  width: 100%;
+  margin: 0;
+  padding: 84px max(16px, calc((100vw - 1180px) / 2));
+  display: grid;
+  grid-template-columns: 0.82fr 1fr;
+  gap: 42px;
+  align-items: center;
+  background:
+    linear-gradient(90deg, rgba(159, 181, 140, 0.12), transparent 34%),
+    linear-gradient(180deg, #111014, #0a0a0c);
+  border-top: 1px solid rgba(247, 239, 228, 0.08);
+}
+
+.home-appointment-image {
+  min-height: 430px;
+  overflow: hidden;
+  border-radius: 8px;
+  border: 1px solid rgba(247, 239, 228, 0.14);
+  box-shadow: var(--shadow);
+}
+
+.home-appointment-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(1.06) contrast(1.04) saturate(1.08);
+}
+
+.home-appointment-copy {
+  padding: 0;
+}
+
+.home-appointment-copy h2 {
+  margin: 0 0 14px;
+  max-width: 720px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  line-height: 1.05;
+  letter-spacing: 0;
+  color: #fff7ed;
+}
+
+.home-appointment-copy p:not(.eyebrow) {
+  max-width: 620px;
+  color: var(--muted);
+}
+
+.appointment-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
   margin-top: 28px;
 }
 
@@ -950,12 +1125,31 @@ a {
     background: rgba(214, 170, 89, 0.18);
   }
 
-  .intro-grid,
+  .atelier-intro,
   .feature-band,
+  .home-appointment,
   .contact-layout,
   .dom-layout,
   .event-focus {
     grid-template-columns: 1fr;
+  }
+
+  .section-heading {
+    display: block;
+  }
+
+  .lookbook-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .lookbook-card,
+  .lookbook-card:nth-child(2),
+  .lookbook-card:nth-child(3) {
+    min-height: 340px;
+  }
+
+  .home-appointment {
+    padding-top: 58px;
   }
 
   .product-grid,
@@ -987,6 +1181,11 @@ a {
     white-space: nowrap;
   }
 
+  .hero-meta span {
+    min-height: 32px;
+    font-size: 0.82rem;
+  }
+
   .metric-strip,
   .product-grid,
   .trustee-grid,
@@ -1010,6 +1209,37 @@ a {
 
   .section {
     padding: 54px 0;
+  }
+
+  .atelier-intro {
+    gap: 28px;
+  }
+
+  .metric-strip div {
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .metric-strip div:last-child {
+    border-bottom: 0;
+  }
+
+  .lookbook-section {
+    padding-top: 22px;
+  }
+
+  .lookbook-card,
+  .lookbook-card:nth-child(2),
+  .lookbook-card:nth-child(3) {
+    min-height: 310px;
+  }
+
+  .lookbook-card div {
+    padding: 72px 18px 18px;
+  }
+
+  .lookbook-card h3 {
+    font-size: 1.38rem;
   }
 
   .feature-band::before {
@@ -1037,6 +1267,23 @@ a {
   }
 
   .feature-button {
+    width: 100%;
+  }
+
+  .home-appointment {
+    padding: 54px 16px;
+    gap: 22px;
+  }
+
+  .home-appointment-image {
+    min-height: 330px;
+  }
+
+  .home-appointment-copy {
+    padding: 24px 18px;
+  }
+
+  .appointment-actions .button {
     width: 100%;
   }
 }
