@@ -64,7 +64,7 @@ function setupBoardProfiles() {
 
   function openModal(card) {
       modalImg.src = card.dataset.img;
-      modalImg.alt = `Animated picture of board member ${card.dataset.name}`;
+      modalImg.alt = `Professional portrait representing ${card.dataset.name}`;
       modalName.textContent = card.dataset.name;
       modalRole.textContent = card.dataset.role;
       modalBio.textContent = card.dataset.bio;
