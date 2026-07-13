@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Products | Aurora Vogue</title>
-  <link rel="preconnect" href="https://images.unsplash.com">
   <link rel="stylesheet" href="styles.css">
   <script src="script.js" defer></script>
 </head>
@@ -23,7 +22,7 @@
       </div>
     </nav>
     <marquee class="ticker" behavior="scroll" direction="left">
-      Grand Fashion Preview: August 18, 2026 | Bridal couture fittings open every Friday | Student showcase discount: 15% off selected pieces
+      Grand Fashion Preview: September 1, 2026 | Bridal couture fittings open every Friday | Student showcase discount: 15% off selected pieces
     </marquee>
   </header>
 
@@ -41,22 +40,24 @@
         <button class="filter-btn active" data-filter="all" type="button">All</button>
         <button class="filter-btn" data-filter="Couture" type="button">Couture</button>
         <button class="filter-btn" data-filter="Formal Wear" type="button">Formal Wear</button>
+        <button class="filter-btn" data-filter="Ready-to-Wear" type="button">Ready-to-Wear</button>
+        <button class="filter-btn" data-filter="Bridal" type="button">Bridal</button>
         <button class="filter-btn" data-filter="Accessories" type="button">Accessories</button>
         <button class="filter-btn" data-filter="Footwear" type="button">Footwear</button>
       </div>
 
       <div class="product-grid">
         <article class="product-card reveal" data-category="Couture">
-          <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=900&q=85" alt="Model wearing couture evening dress">
+          <img src="assets/celeste-evening-gown.jpg" alt="Model wearing a beaded evening gown with a gold clutch">
           <div>
             <span>Couture</span>
-            <h2>Celeste Evening Gown</h2>
-            <p>Flowing satin dress with structured bodice and hand-finished detail.</p>
+            <h2>Celeste Beaded Gown</h2>
+            <p>Beaded evening gown with a sculpted bodice, soft drape, and clutch-ready finish.</p>
             <strong>$240</strong>
           </div>
         </article>
         <article class="product-card reveal" data-category="Formal Wear">
-          <img src="https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?auto=format&fit=crop&w=900&q=85" alt="Well dressed man in tailored outfit">
+          <img src="assets/royal-tailored-set.jpg" alt="Well dressed man in tailored outfit">
           <div>
             <span>Formal Wear</span>
             <h2>Royal Tailored Set</h2>
@@ -65,7 +66,7 @@
           </div>
         </article>
         <article class="product-card reveal" data-category="Accessories">
-          <img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=900&q=85" alt="Luxury handbag on display">
+          <img src="assets/aurora-mini-bag.jpg" alt="Structured luxury handbag on display">
           <div>
             <span>Accessories</span>
             <h2>Aurora Mini Bag</h2>
@@ -74,7 +75,7 @@
           </div>
         </article>
         <article class="product-card reveal" data-category="Footwear">
-          <img src="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?auto=format&fit=crop&w=900&q=85" alt="Elegant high heel shoes">
+          <img src="assets/velvet-step-heels.jpg" alt="Elegant blush high heel shoes">
           <div>
             <span>Footwear</span>
             <h2>Velvet Step Heels</h2>
@@ -82,22 +83,58 @@
             <strong>$110</strong>
           </div>
         </article>
-        <article class="product-card reveal" data-category="Couture">
-          <img src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?auto=format&fit=crop&w=900&q=85" alt="Fashion model in designer outfit">
+        <article class="product-card reveal" data-category="Ready-to-Wear">
+          <img src="assets/opal-cocktail-dress.jpg" alt="Woman wearing a green lace crop top and round sunglasses">
           <div>
-            <span>Couture</span>
-            <h2>Opal Cocktail Dress</h2>
-            <p>A statement dress for dinners, award nights, and formal celebrations.</p>
-            <strong>$165</strong>
+            <span>Ready-to-Wear</span>
+            <h2>Sage Lace Crop Top</h2>
+            <p>Textured green lace top styled for sunny outings, campus events, and casual parties.</p>
+            <strong>$72</strong>
           </div>
         </article>
-        <article class="product-card reveal" data-category="Formal Wear">
-          <img src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=900&q=85" alt="Elegant fashion portrait">
+        <article class="product-card reveal" data-category="Ready-to-Wear">
+          <img src="assets/ember-print-wrap.jpg" alt="Model wearing a blue coat set with a pink crossbody bag">
           <div>
-            <span>Formal Wear</span>
-            <h2>Ember Print Wrap</h2>
-            <p>Color-rich wrap dress with adjustable fit and neat finishing.</p>
-            <strong>$130</strong>
+            <span>Ready-to-Wear</span>
+            <h2>Milan Blue Coat Set</h2>
+            <p>Layered blue coat look with scarf styling and an easy crossbody accent.</p>
+            <strong>$155</strong>
+          </div>
+        </article>
+        <article class="product-card reveal" data-category="Couture">
+          <img src="assets/ruby-evening-gown.jpg" alt="Model wearing a full red sequin gown">
+          <div>
+            <span>Couture</span>
+            <h2>Ruby Sequin Gown</h2>
+            <p>Full red sequin gown designed for birthdays, receptions, and formal entrances.</p>
+            <strong>$260</strong>
+          </div>
+        </article>
+        <article class="product-card reveal" data-category="Bridal">
+          <img src="assets/pearl-bridal-gown.jpg" alt="Bride wearing a white gown with a long train">
+          <div>
+            <span>Bridal</span>
+            <h2>Pearl Bridal Gown</h2>
+            <p>White bridal gown with lace detail, graceful volume, and a long train.</p>
+            <strong>$420</strong>
+          </div>
+        </article>
+        <article class="product-card reveal" data-category="Ready-to-Wear">
+          <img src="assets/solstice-linen-set.jpg" alt="Woman wearing a white linen top and light linen pants">
+          <div>
+            <span>Ready-to-Wear</span>
+            <h2>Solstice Linen Set</h2>
+            <p>Breathable white linen top and relaxed pants for clean summer styling.</p>
+            <strong>$145</strong>
+          </div>
+        </article>
+        <article class="product-card reveal" data-category="Accessories">
+          <img src="assets/ivory-evening-clutch.jpg" alt="White evening clutch with crystal detail">
+          <div>
+            <span>Accessories</span>
+            <h2>Ivory Evening Clutch</h2>
+            <p>White occasion clutch with crystal detail for bridal, dinner, and gala looks.</p>
+            <strong>$95</strong>
           </div>
         </article>
       </div>

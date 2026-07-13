@@ -598,9 +598,10 @@ a {
   display: grid;
   align-items: end;
   color: #fff7ed;
+  /* Page hero images are local so the static site works without remote image hotlinks. */
   background:
     linear-gradient(90deg, rgba(8, 8, 10, 0.62), rgba(8, 8, 10, 0.18), rgba(8, 8, 10, 0.02)),
-    url("https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1800&q=85") center/cover;
+    url("assets/page-hero-rack.jpg") center/cover;
 }
 
 .page-hero.compact {
@@ -610,19 +611,19 @@ a {
 .board-hero {
   background:
     linear-gradient(90deg, rgba(8, 8, 10, 0.62), rgba(8, 8, 10, 0.18), rgba(8, 8, 10, 0.02)),
-    url("https://images.unsplash.com/photo-1558769132-cb1aea458c5e?auto=format&fit=crop&w=1800&q=85") center/cover;
+    url("assets/studio-rack.jpg") center/cover;
 }
 
 .appointment-hero {
   background:
     linear-gradient(90deg, rgba(8, 8, 10, 0.62), rgba(8, 8, 10, 0.18), rgba(8, 8, 10, 0.02)),
-    url("https://images.unsplash.com/photo-1558769132-cb1aea458c5e?auto=format&fit=crop&w=1800&q=85") center/cover;
+    url("assets/studio-rack.jpg") center/cover;
 }
 
 .events-hero {
   background:
     linear-gradient(90deg, rgba(8, 8, 10, 0.62), rgba(8, 8, 10, 0.18), rgba(8, 8, 10, 0.02)),
-    url("https://images.unsplash.com/photo-1469334031218-e382a71b716b?auto=format&fit=crop&w=1800&q=85") center/cover;
+    url("assets/ruby-evening-gown.jpg") center/cover;
 }
 
 .page-hero-inner {
@@ -670,6 +671,7 @@ a {
 .dom-card,
 .contact-panel,
 .appointment-form {
+  /* Shared card shell keeps catalogue, board, event, and form surfaces visually aligned. */
   background: linear-gradient(180deg, rgba(37, 32, 38, 0.98), rgba(20, 18, 23, 0.98));
   border: 1px solid var(--line);
   border-radius: 8px;
@@ -705,6 +707,11 @@ a {
   transform: translateY(-4px);
   border-color: rgba(214, 170, 89, 0.34);
   box-shadow: 0 28px 76px rgba(0, 0, 0, 0.42);
+}
+
+.event-card:focus-visible {
+  outline: 3px solid rgba(214, 170, 89, 0.34);
+  outline-offset: 4px;
 }
 
 .product-card.is-hidden {
@@ -803,6 +810,7 @@ a {
 }
 
 .member-img-wrap img {
+  /* Portraits keep a little headroom so mobile crops do not clip faces. */
   width: 100%;
   aspect-ratio: 4 / 3;
   object-fit: cover;

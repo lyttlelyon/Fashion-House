@@ -15,6 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
   setupBoardProfiles();
   animateCounters();
   setupProductFilters();
+  setupEventAppointmentPrefill();
   setupAppointmentForm();
   setupCountdown();
   setFooterYear();
@@ -63,13 +64,14 @@ function setupBoardProfiles() {
   }
 
   function openModal(card) {
-      modalImg.src = card.dataset.img;
-      modalImg.alt = `Professional portrait representing ${card.dataset.name}`;
-      modalName.textContent = card.dataset.name;
-      modalRole.textContent = card.dataset.role;
-      modalBio.textContent = card.dataset.bio;
-      modal.classList.add("modal-open");
-      modal.setAttribute("aria-hidden", "false");
+    // Board cards keep their profile content in data attributes so one modal can serve every card.
+    modalImg.src = card.dataset.img;
+    modalImg.alt = `Professional portrait for ${card.dataset.name}`;
+    modalName.textContent = card.dataset.name;
+    modalRole.textContent = card.dataset.role;
+    modalBio.textContent = card.dataset.bio;
+    modal.classList.add("modal-open");
+    modal.setAttribute("aria-hidden", "false");
   }
 
   cards.forEach((card) => {
@@ -185,12 +187,36 @@ function setupProductFilters() {
       buttons.forEach((item) => item.classList.remove("active"));
       button.classList.add("active");
 
+      // Filtering only toggles visibility, preserving the catalogue order for every category.
       products.forEach((product) => {
         const shouldShow = filter === "all" || product.dataset.category === filter;
         product.classList.toggle("is-hidden", !shouldShow);
       });
     });
   });
+}
+
+function setupEventAppointmentPrefill() {
+  const form = document.querySelector("#appointmentForm");
+  if (!form) return;
+
+  const eventNames = {
+    "grand-fashion-preview": "Grand Fashion Preview",
+    "bridal-fitting-weekend": "Bridal Fitting Weekend",
+    "campus-style-popup": "Campus Style Pop-up"
+  };
+  const params = new URLSearchParams(window.location.search);
+  const eventName = eventNames[params.get("event")];
+
+  if (!eventName) return;
+
+  const service = form.elements.service;
+  const message = form.elements.message;
+
+  if (service) service.value = "Event styling";
+  if (message && !message.value) {
+    message.value = `I would like to book an appointment for ${eventName}.`;
+  }
 }
 
 function setupAppointmentForm() {
@@ -220,6 +246,7 @@ function setupCountdown() {
   const minutes = countdown.querySelector("[data-minutes]");
 
   function updateCountdown() {
+    // The target date stays in HTML, letting event copy and countdown timing change together.
     const difference = Math.max(0, eventDate - Date.now());
     const dayValue = Math.floor(difference / (1000 * 60 * 60 * 24));
     const hourValue = Math.floor((difference / (1000 * 60 * 60)) % 24);
