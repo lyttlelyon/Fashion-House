@@ -31,13 +31,14 @@
       <div class="page-hero-inner reveal">
         <p class="eyebrow">Document Object Model</p>
         <h1>Website DOM structure.</h1>
-        <p>This page shows the main HTML structure used across the Aurora Vogue website.</p>
+        <p>This page shows the current HTML structure, interactive sections, and local asset pattern used across the Aurora Vogue website.</p>
       </div>
     </section>
 
     <section class="section dom-layout">
       <div class="dom-card reveal">
         <h2>DOM Tree</h2>
+        <!-- Keep this tree in sync when major page sections or shared components change. -->
         <pre><code>html
 |-- head
 |   |-- meta charset
@@ -55,19 +56,43 @@
     |-- main
     |   |-- section.page-hero or section.hero
     |   |-- section.section
-    |   `-- page-specific content
+    |   |   |-- div.product-grid > article.product-card
+    |   |   |-- div.board-grid > article.member-card
+    |   |   `-- div.event-list > a.event-card
+    |   |-- form#appointmentForm
+    |   `-- div#memberModal.modal-backdrop
     `-- footer.site-footer</code></pre>
       </div>
 
       <div class="dom-card reveal">
         <h2>Included Pages</h2>
         <ul class="page-list">
-          <li><strong>index.html</strong> - Home page and fashion house introduction.</li>
-          <li><strong>products.html</strong> - Product showcase with JavaScript filtering.</li>
-          <li><strong>board.html</strong> - Board member profiles and roles.</li>
-          <li><strong>appointments.html</strong> - Inquiries and appointment booking form.</li>
-          <li><strong>events.html</strong> - Upcoming events with JavaScript countdown.</li>
+          <li><strong>index.html</strong> - Home page, featured products, collection band, and appointment callout.</li>
+          <li><strong>products.html</strong> - Product showcase with local item images and JavaScript filtering.</li>
+          <li><strong>board.html</strong> - Board member cards with a shared profile modal.</li>
+          <li><strong>appointments.html</strong> - Inquiry form with event appointment prefill support.</li>
+          <li><strong>events.html</strong> - Clickable event cards and JavaScript countdown.</li>
           <li><strong>dom.html</strong> - Document Object Model structure.</li>
+        </ul>
+      </div>
+
+      <div class="dom-card reveal">
+        <h2>Interactive Elements</h2>
+        <ul class="page-list">
+          <li><strong>Mobile navigation</strong> - Toggles the edge-to-edge menu on small screens.</li>
+          <li><strong>Product filters</strong> - Shows matching product cards without changing their order.</li>
+          <li><strong>Board modal</strong> - Opens profile details from each board card.</li>
+          <li><strong>Event links</strong> - Send visitors to the appointment form with the event context.</li>
+          <li><strong>Countdown</strong> - Reads the next major event date from the events page markup.</li>
+        </ul>
+      </div>
+
+      <div class="dom-card reveal">
+        <h2>Asset Pattern</h2>
+        <ul class="page-list">
+          <li><strong>assets/</strong> - Stores product, board, hero, appointment, and event imagery locally.</li>
+          <li><strong>styles.css</strong> - References local background images for page heroes.</li>
+          <li><strong>HTML img tags</strong> - Use local JPG paths with descriptive alt text.</li>
         </ul>
       </div>
     </section>
